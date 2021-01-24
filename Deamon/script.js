@@ -14,8 +14,7 @@ run.addEventListener('click', ()=> {
     if(data["login"] == true){
     
         window.location.replace('https://painel.d3a0on.vercel.app/')
-    }
-    else {
+    } else {
          alert('Chave Invalida')
     }
     })
