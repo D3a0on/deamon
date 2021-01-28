@@ -5,7 +5,7 @@ const run = document.getElementById('run')
 
 run.addEventListener('click', ()=> {
     
-    fetch("https://api-git-main.d3a0on.vercel.app/api", { 
+    fetch("https://api-rho-swart.vercel.app/api", { 
       
     // Adding method type 
     method: "POST", 
