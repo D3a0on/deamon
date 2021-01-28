@@ -4,19 +4,8 @@ const run = document.getElementById('run')
 const server_link = ``
 
 run.addEventListener('click', ()=> {
-    fetch(server_link).then(response => response.Json()).then(data, ()=> {
+    fetch('https://api-git-main.d3a0on.vercel.app/api')
     
-    if(data["login"] == false){
-    
-        alert('Chave Invalida')
-        
-    }
-    if(data["login"] == true){
-    
-        window.location.replace('https://painel.d3a0on.vercel.app/')
-    } else {
-         alert('Chave Invalida')
-    }
     })
 
 
