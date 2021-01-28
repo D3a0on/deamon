@@ -1,6 +1,8 @@
 const key = document.getElementById('key')
 const run = document.getElementById('run')
 
+
+
 run.addEventListener('click', ()=> {
     
     fetch("https://api-git-main.d3a0on.vercel.app/api", { 
@@ -10,14 +12,12 @@ run.addEventListener('click', ()=> {
       
     // Adding body or contents to send 
     body: JSON.stringify({ 
-        title: "foo", 
-        body: `${key.value}`, 
-        userId: 1 
+        "key":key.value
     }), 
       
     // Adding headers to the request 
     headers: { 
-        "Content-type": "application/json; charset=UTF-8"
+        "Content-type": "application/json",
     } 
 }) 
   
@@ -25,4 +25,15 @@ run.addEventListener('click', ()=> {
 .then(response => response.json()) 
   
 // Displaying results to console 
-.then(json => console.log(json));
+.then(json => {
+
+        if(json.login == true) {
+            open(json.redirect)
+        }
+        else{
+            alert('Key Invavida')
+        }
+
+
+})
+})
